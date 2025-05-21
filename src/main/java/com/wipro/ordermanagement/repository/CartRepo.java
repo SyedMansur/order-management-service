@@ -12,9 +12,9 @@ import com.wipro.ordermanagement.entity.CartEntity;
 @Repository
 public interface CartRepo extends JpaRepository<CartEntity, Integer>{
 
-	List<CartEntity> findByUserId(Integer userId);
+	List<CartEntity> findByUserId(String userId);
 	
 	@Query(value = "select * from cart_details cd inner join cart_product_qty cp on cp.cart_item_id = cd.id "
 			+ "where cd.user_id =:userId and cp.product_id =:productId", nativeQuery = true)
-    CartEntity findEntity(@Param("userId") Integer userId, @Param("productId") Integer productId);
+    CartEntity findEntity(@Param("userId") String userId, @Param("productId") Integer productId);
 }

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class CartResponse {
 	
 	private Integer id;
-	private Integer userId;
+	private String userId;
 	
 	private Map<Integer, Integer> productQty = new HashMap<>();
 	private double totalPrice;

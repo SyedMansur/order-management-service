@@ -14,5 +14,5 @@ public interface CartService {
 
 	CartEntity updateProductQty(CartDto cartDto);
 
-	List<CartResponse> getCartByUserId(int userId);
+	List<CartResponse> getCartByUserId(String userId);
 }

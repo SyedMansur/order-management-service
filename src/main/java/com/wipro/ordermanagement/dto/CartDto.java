@@ -8,6 +8,6 @@ import lombok.Data;
 @Data
 public class CartDto {
 	
-    private Integer userId;
+    private String userId;
     private Map<Integer, Integer> productQty = new HashMap<>();
 }

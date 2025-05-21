@@ -51,7 +51,7 @@ public class CartController {
 	}
 
 	@GetMapping("/{userId}")
-	public ResponseEntity<List<CartResponse>> getCartByUserId(@PathVariable int userId) {
+	public ResponseEntity<List<CartResponse>> getCartByUserId(@PathVariable String userId) {
 
 		List<CartResponse> cartResponseList = cartService.getCartByUserId(userId);
 

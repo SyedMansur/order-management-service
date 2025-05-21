@@ -12,8 +12,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapKeyColumn;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
 
 @Entity(name = "CART_DETAILS")
@@ -26,7 +24,7 @@ public class CartEntity {
     private Integer id;
 	
 	@Column(name = "USER_ID", nullable = false)
-    private Integer userId;
+    private String userId;
 	
     @ElementCollection
     @CollectionTable(name = "cart_product_qty", joinColumns = @JoinColumn(name = "cart_item_id"))

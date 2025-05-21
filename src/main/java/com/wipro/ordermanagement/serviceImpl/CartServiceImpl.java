@@ -114,6 +114,7 @@ public class CartServiceImpl implements CartService {
 						cart.setTotalPrice(totalPrice);
 						cart.setTotalQuantity(totalQty);
 						cart.setProductQty(cartItem.getProductQty());
+						
 						return cartRepo.save(cart);
 					} else {
 						throw new RuntimeException("Product " + entry.getKey() + " not available in required quantity");
@@ -127,7 +128,7 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public List<CartResponse> getCartByUserId(int userId) {
+	public List<CartResponse> getCartByUserId(String userId) {
 		
 		List<CartResponse> cartResList = new ArrayList<>();
 		List<CartEntity> cartList = cartRepo.findByUserId(userId);

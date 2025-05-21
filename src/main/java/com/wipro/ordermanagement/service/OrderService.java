@@ -2,18 +2,19 @@ package com.wipro.ordermanagement.service;
 
 import java.util.List;
 
-import com.wipro.ordermanagement.entity.OrderEntity;
+import com.wipro.ordermanagement.dto.OrderRequest;
+import com.wipro.ordermanagement.response.OrderResponse;
 
 public interface OrderService {
 	
-    OrderEntity placeOrder(Integer userId);
+    String placeOrder(OrderRequest orderReq);
     
     
-    OrderEntity cancelOrder(Integer orderId);
+    String cancelOrder(Integer orderId);
     
-    List<OrderEntity> getAllOrders();
+//    List<OrderEntity> getAllOrders();
     
-    List<OrderEntity> getOrdersByUserId(Integer userId);
+    List<OrderResponse> getOrdersByUserId(String userId);
     
-    OrderEntity getOrderById(Integer orderId);
+//    OrderEntity getOrderById(Integer orderId);
 }

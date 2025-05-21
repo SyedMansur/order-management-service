@@ -22,10 +22,10 @@ public class OrderEntity {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 	
 	@Column(name = "USER_ID")
-    private Integer userId;
+    private String userId;
     
 	@Column(name = "TOT_PRICE")
     private Double totalPrice;
@@ -34,7 +34,7 @@ public class OrderEntity {
     private Integer totalQty;
     
 	@Column(name = "ORDER_STATUS")
-    private String status; // Example: "PLACED", "CANCELLED"
+    private String status; 
     
 	@Column(name = "ORDER_DATE")
     private LocalDateTime orderDate;
